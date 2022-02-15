@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/edittext_bg.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/layout_border.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/textview_bg.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/textview_bg_not.xml" value="0.157" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.43261718749999994" />
+        <entry key="app/src/main/res/layout/fragment_add_repo.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/fragment_branch.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_commits.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.28072916666666664" />
+        <entry key="app/src/main/res/layout/fragment_issues.xml" value="0.29583333333333334" />
+        <entry key="app/src/main/res/layout/item_branch.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/item_commit.xml" value="0.29375" />
+        <entry key="app/src/main/res/layout/item_hom.xml" value="0.29375" />
+        <entry key="app/src/main/res/layout/item_home.xml" value="0.3879310344827586" />
+        <entry key="app/src/main/res/layout/item_issues.xml" value="0.30501535312180145" />
+        <entry key="app/src/main/res/menu/detail_menu.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
