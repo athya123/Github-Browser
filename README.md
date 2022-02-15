@@ -4,7 +4,7 @@ A simple android app for browsing your favourite github reposiotory
 
 ***
 
-#Instructions
+# Instructions
 
 1. Clone the repository in your Android Studio IDE (Get from VCS)
 2. Build the project in your IDE
