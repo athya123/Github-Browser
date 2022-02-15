@@ -33,7 +33,7 @@ Note -> The github API only supports 60 requests per hour, so if the repository 
     <img align="center" src = "/Screenshots/screen7.jpeg" width="25%" height="25%">
     <img align="center" src = "/Screenshots/screen6.jpeg" width="25%" height="25%">
     <img align="center" src = "/Screenshots/screen5.jpeg" width="25%" height="25%">
-    <img src = "/Screenshots/screen4" width="25%" height="25%">
+    <img src = "/Screenshots/screen4.jpeg" width="25%" height="25%">
 </p>
 
 
