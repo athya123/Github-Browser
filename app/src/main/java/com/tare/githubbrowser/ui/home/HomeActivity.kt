@@ -32,6 +32,7 @@ class HomeActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
             DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.apply {
+            baseView = this@HomeActivity
             viewModel = homeViewModel
             lifecycleOwner = this@HomeActivity
         }
@@ -42,9 +43,11 @@ class HomeActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
         rvHome.adapter = homeAdapter
         homeViewModel.repoList.observe(this) {
             it?.let { list ->
-                llHome.visibility = View.GONE
-                rvHome.visibility = View.VISIBLE
-                homeAdapter.submitList(list)
+                if (list.isNotEmpty()) {
+                    llHome.visibility = View.GONE
+                    rvHome.visibility = View.VISIBLE
+                    homeAdapter.submitList(list)
+                }
             }
         }
     }
@@ -63,6 +66,10 @@ class HomeActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun onAddRepoClick(){
+        replaceFragment(AddRepoFragment.newInstance())
     }
 
     fun onShareClick(item: Repository) {
@@ -88,7 +95,7 @@ class HomeActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
                 R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left,
                 R.anim.slide_out_right
             )
-            add(R.id.fragment_container, fragment)
+            replace(R.id.fragment_container, fragment)
             addToBackStack(null)
             commit()
         }

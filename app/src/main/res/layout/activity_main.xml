@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <variable
+            name="baseView"
+            type="com.tare.githubbrowser.ui.home.HomeActivity" />
         <variable
             name="viewModel"
             type="com.tare.githubbrowser.ui.home.HomeViewModel" />
@@ -38,6 +42,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/gilroy_medium"
+                android:onClick="@{() -> baseView.onAddRepoClick()}"
                 android:text="@string/add"/>
         </LinearLayout>
 

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.tare.githubbrowser.R
 import com.tare.githubbrowser.databinding.FragmentAddRepoBinding
@@ -17,11 +18,12 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class AddRepoFragment : Fragment() {
-    private val addRepoViewModel: AddRepoViewModel by viewModels()
+    private lateinit var addRepoViewModel: AddRepoViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        addRepoViewModel = ViewModelProvider(this)[AddRepoViewModel::class.java]
         (requireActivity() as HomeActivity).supportActionBar?.title = "Add Repo"
         setHasOptionsMenu(true)
         val binding: FragmentAddRepoBinding =
@@ -48,6 +50,7 @@ class AddRepoFragment : Fragment() {
                         it.responseGetRepo.description,
                         it.responseGetRepo.owner.login
                     )
+                    addRepoViewModel.fetchRepoFromNetwork.value = Response.Empty
                 }
                 is Response.Error -> {
                     Toast.makeText(
@@ -56,6 +59,7 @@ class AddRepoFragment : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
+                is Response.Empty -> { }
                 else -> {}
             }
         }
